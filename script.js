@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const monthly_repayment = ((amount * monthly_rate * ((1 + monthly_rate) ** no_of_payments)) / ((( 1 + monthly_rate) ** no_of_payments) - 1)).toFixed(2);
         const total_repayment = (monthly_repayment * no_of_payments).toFixed(2);
-        const total_interest = total_repayment - amount;
+        const total_interest = (total_repayment - amount).toFixed(2);
         console.log('M:', monthly_repayment);
         console.log('T:', total_repayment);
         console.log('TR:', total_interest);
